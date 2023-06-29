@@ -2,7 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../../styles/header.css";
 
-const navLinks = [
+interface NavLinkItem {
+  path: string;
+  display: string;
+}
+
+const navLinks: NavLinkItem[] = [
   {
     path: "/home",
     display: "HOME",
@@ -46,7 +51,7 @@ const Header = () => {
         <div key={index} className="navLinkWrapper">
           <NavLink
             to={link.path}
-            className={({ isActive }) =>
+            className={({ isActive }: { isActive: boolean }) =>
               isActive ? "navLink active" : "navLink"
             }
           >
