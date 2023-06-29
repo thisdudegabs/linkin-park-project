@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import "../styles/members.css";
 
-const Members = () => {
-  return <div></div>;
+const Members: FC = () => {
+  return <div>My Component</div>;
 };
 
 export default Members;

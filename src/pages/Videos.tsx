@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import "../styles/videos.css";
 
-const Videos = () => {
-  return <div></div>;
+const Videos: FC = () => {
+  return <div>My Component</div>;
 };
 
 export default Videos;

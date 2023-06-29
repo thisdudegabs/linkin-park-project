@@ -1,8 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import "../styles/music.css";
 
-const Music = () => {
-  return <div></div>;
+const Music: FC = () => {
+  return <div>My Component</div>;
 };
-
 export default Music;

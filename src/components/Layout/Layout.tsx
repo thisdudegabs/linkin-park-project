@@ -1,10 +1,10 @@
-import React, { Fragment } from "react";
+import React, { FC, Fragment } from "react";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Routers from "../../routers/Routers";
 
-const Layout = () => {
+const Layout: FC = () => {
   return (
     <Fragment>
       <Header />
