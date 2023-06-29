@@ -1,8 +1,61 @@
 import React from "react";
-import "../styles/header.css";
+import { NavLink } from "react-router-dom";
+import "../../styles/header.css";
+
+const navLinks = [
+  {
+    path: "/home",
+    display: "HOME",
+  },
+  {
+    path: "/live",
+    display: "LIVE",
+  },
+
+  {
+    path: "/music",
+    display: "MUSIC",
+  },
+
+  {
+    path: "/merch",
+    display: "MERCH",
+  },
+  {
+    path: "/videos",
+    display: "VIDEOS",
+  },
+  {
+    path: "/updates",
+    display: "UPDATES",
+  },
+  {
+    path: "/members",
+    display: "MEMBERS",
+  },
+  {
+    path: "/follow",
+    display: "FOLLOW",
+  },
+];
 
 const Header = () => {
-  return <div></div>;
+  return (
+    <div className="header">
+      {navLinks.map((link, index) => (
+        <div key={index} className="navLinkWrapper">
+          <NavLink
+            to={link.path}
+            className={({ isActive }) =>
+              isActive ? "navLink active" : "navLink"
+            }
+          >
+            {link.display}
+          </NavLink>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default Header;

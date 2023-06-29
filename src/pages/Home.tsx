@@ -1,8 +1,12 @@
-import React from "react";
 import "../styles/home.css";
+import LogoGif from "../assets/logos/logo.gif";
 
 const Home = () => {
-  return <div></div>;
+  return (
+    <div className="home">
+      <img src={LogoGif} alt="Logo" className="logo" />
+    </div>
+  );
 };
 
 export default Home;

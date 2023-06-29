@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 10vw;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: transparent;
+  padding: 0vh 2vw;
+}
+
+.navLinkWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #057fa1;
+  font-size: 5rem;
+}
