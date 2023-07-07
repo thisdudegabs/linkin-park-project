@@ -1,0 +1,136 @@
+.albums {
+  max-width: 50vw;
+  margin-left: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.albums-appear {
+  animation: albumsAppear 0.5s forwards;
+}
+
+@keyframes albumsAppear {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.album {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.album::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-shadow: inset 0 0 0 0 rgba(5, 127, 161, 1);
+  transition: all 0.5s ease-in-out;
+}
+
+.album:hover::before {
+  box-shadow: inset 0 0 0 1rem rgba(5, 127, 161, 1);
+}
+
+.album img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+.album:hover img {
+  filter: brightness(10%);
+}
+
+.album-title {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: white;
+  opacity: 0;
+  transition: all 0.3s ease;
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.album:hover {
+  border: 1rem solid #057fa1;
+}
+
+.album:hover img {
+  filter: brightness(50%);
+}
+
+.album:hover .album-title {
+  opacity: 1;
+  font-size: 2rem;
+}
+
+.button {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  background: #057fa1;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.album:hover .button {
+  opacity: 1;
+}
+
+@media (max-width: 1800px) {
+  .albums {
+    max-width: 100vw;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .button {
+    bottom: 40%;
+    background: #057fa1;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 953px) {
+  .albums {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 691px) {
+  .button {
+    bottom: 35%;
+  }
+}
+
+@media (max-width: 500px) {
+  .button {
+    bottom: 30%;
+  }
+}
+
+@media (max-width: 379px) {
+  .button {
+    bottom: 25%;
+  }
+}

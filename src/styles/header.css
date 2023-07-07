@@ -8,7 +8,7 @@
   right: 0;
   top: 0;
   background-color: transparent;
-  padding: 0vh 2vw;
+  padding: 0vh 0.5vw;
 }
 
 .navLinkWrapper {
@@ -17,7 +17,43 @@
 }
 
 .navLink {
+  position: relative;
   text-decoration: none;
   color: #057fa1;
-  font-size: 5rem;
+  font-size: 8rem;
+  margin-bottom: -2vh;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  right: 0;
+  height: 1rem;
+  background: currentColor;
+  top: 50%;
+  transition: left 0.5s;
+}
+
+.navLink:hover::after {
+  left: 0;
+}
+
+.navLink.active::after {
+  left: 0;
+}
+
+@media only screen and (max-width: 1800px) {
+  .navLink {
+    font-size: 0rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 425px) {
+}
+
+@media only screen and (max-width: 320px) {
 }

@@ -1,0 +1,78 @@
+.show-list {
+  animation: slide-in 0.5s forwards;
+  position: absolute;
+  left: 0;
+  top: 35vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  color: #057fa1;
+  margin-left: 2rem;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.show {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.ticket-button {
+  margin-left: 10vw;
+  margin-right: 2vw;
+  color: #057fa1;
+  font-size: 2rem;
+  border-color: #057fa1;
+  border-width: 0.3rem;
+}
+
+.show-info p {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 1599px) {
+  .show-list {
+    top: 40vh;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .show-list {
+    top: 0vh;
+  }
+
+  .ticket-button {
+    font-size: 1rem;
+    border-width: 0.2rem;
+  }
+
+  .show-info p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 357px) {
+  .show-list {
+    top: 5vh;
+  }
+
+  .ticket-button {
+    font-size: 0.8rem;
+    border-width: 0rem;
+  }
+
+  .show-info p {
+    font-size: 1rem;
+  }
+}

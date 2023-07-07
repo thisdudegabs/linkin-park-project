@@ -7,6 +7,7 @@ import Members from "../pages/Members";
 import Merch from "../pages/Merch";
 import Music from "../pages/Music";
 import Updates from "../pages/Updates";
+import NewsPage from "../pages/NewsPage";
 import Videos from "../pages/Videos";
 
 const Routers = () => {
@@ -20,6 +21,7 @@ const Routers = () => {
       <Route path="/merch" element={<Merch />} />
       <Route path="/music" element={<Music />} />
       <Route path="/updates" element={<Updates />} />
+      <Route path="/updates/:newsId" element={<NewsPage />} />
       <Route path="/videos" element={<Videos />} />
     </Routes>
   );
