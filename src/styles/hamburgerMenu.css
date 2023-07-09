@@ -1,0 +1,38 @@
+.menu-icon {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  font-size: 2rem;
+  background: none;
+  border: none;
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.menu-logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #057fa1;
+  font-size: 2rem;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #057fa1;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}

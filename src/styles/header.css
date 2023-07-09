@@ -66,12 +66,6 @@
   left: 0;
 }
 
-@media only screen and (max-width: 1800px) {
-  .navLink {
-    font-size: 0rem;
-  }
-}
-
 @media only screen and (max-width: 768px) {
 }
 
