@@ -19,7 +19,7 @@ const Updates: FC = () => {
   }, []);
 
   return (
-    <div className="updates">
+    <div className="updates" ref={updatesRef}>
       {updates.map((news) => (
         <Link to={`/updates/${news.id}`} key={news.id}>
           <div className="news">

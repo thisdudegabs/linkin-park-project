@@ -1,0 +1,151 @@
+.members {
+  max-width: 50vw;
+  margin-left: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.members-appear {
+  animation: membersAppear 0.5s forwards;
+}
+
+@keyframes membersAppear {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.memberList {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.memberList::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-shadow: inset 0 0 0 0 rgba(5, 127, 161, 1);
+  transition: all 0.5s ease-in-out;
+}
+
+.memberList:hover::before {
+  box-shadow: inset 0 0 0 1rem rgba(5, 127, 161, 1);
+}
+
+.memberList img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+.memberList:hover img {
+  filter: brightness(10%);
+}
+
+.members-title {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: white;
+  opacity: 0;
+  transition: all 0.3s ease;
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.memberList:hover {
+  border: 1rem solid #057fa1;
+}
+
+.memberList:hover img {
+  filter: brightness(50%);
+}
+
+.memberList:hover .members-title {
+  opacity: 1;
+  font-size: 2rem;
+}
+
+.member-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  width: 30vw;
+  height: 30vw;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+  flex-direction: row;
+}
+
+.modal-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.member-image {
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.member-info {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1800px) {
+  .members {
+    max-width: 100vw;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 953px) {
+  .members {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    width: 80vw;
+    height: 80vw;
+  }
+}

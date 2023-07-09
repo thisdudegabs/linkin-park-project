@@ -16,7 +16,7 @@ const Music: React.FC = () => {
   };
 
   return (
-    <div className="albums">
+    <div className="albums" ref={albumsRef}>
       {albums.map((album) => (
         <div key={album.id} className="album">
           <img src={album.image} alt={album.title} />
