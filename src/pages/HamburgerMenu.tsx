@@ -1,5 +1,6 @@
 import React from "react";
-import { RiCloseCircleLine, RiMenuLine } from "react-icons/ri";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import { NavLink } from "react-router-dom";
 import "../styles/hamburgerMenu.css";
 
@@ -53,7 +54,7 @@ const HamburgerMenu: React.FC = () => {
   return (
     <>
       <button className="menu-icon" onClick={toggleMenu}>
-        {isOpen ? <RiCloseCircleLine /> : <RiMenuLine />}
+        {isOpen ? <CloseIcon /> : <MenuIcon />}
       </button>
       {isOpen && (
         <div className="hamburger-menu">
