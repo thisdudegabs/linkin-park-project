@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "../../styles/header.css";
 
 interface NavLinkItem {
@@ -45,8 +45,14 @@ const navLinks: NavLinkItem[] = [
 ];
 
 const Header = () => {
+  const location = useLocation();
+
+  const isSpecialRoute =
+    location.pathname.startsWith("/updates/") ||
+    location.pathname.startsWith("/videos");
+
   return (
-    <div className="header">
+    <div className={`header ${isSpecialRoute ? "hidden-header" : ""}`}>
       {navLinks.map((link, index) => (
         <div key={index} className="navLinkWrapper">
           <NavLink
@@ -55,12 +61,11 @@ const Header = () => {
               isActive ? "navLink active" : "navLink"
             }
           >
-            {link.display}
+            <div className="navLinkInner">{link.display}</div>
           </NavLink>
         </div>
       ))}
     </div>
   );
 };
-
 export default Header;

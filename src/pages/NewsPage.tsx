@@ -4,23 +4,23 @@ import updates, { Updates } from "../assets/data/updatesData";
 import "../styles/newsPage.css";
 
 interface NewsPageParams extends Record<string, string | undefined> {
-  id: string;
+  newsId: string;
 }
 
 const NewsPage: FC = () => {
-  const { id } = useParams<NewsPageParams>();
+  const { newsId } = useParams<NewsPageParams>();
   const [news, setNews] = useState<Updates | null>(null);
 
   useEffect(() => {
-    const newsItem = updates.find((item) => item.id === Number(id));
+    const newsItem = updates.find((item) => item.id === Number(newsId));
     setNews(newsItem || null);
-  }, [id]);
+  }, [newsId]);
 
   return (
     <div style={{ display: "flex" }}>
       {news && (
         <>
-          <div style={{ flex: "1", padding: "10px" }}>
+          <div className="news-collum" style={{ flex: "1", padding: "10px" }}>
             <h1>{news.title}</h1>
             <p>{news.description}</p>
           </div>

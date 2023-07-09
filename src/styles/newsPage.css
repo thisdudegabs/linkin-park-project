@@ -18,3 +18,15 @@
   color: white;
   padding: 20px;
 }
+
+.news-collum {
+  color: #057fa1;
+}
+
+.news-collum h1 {
+  font-size: 3em;
+}
+
+.news-collum p {
+  font-size: 2em;
+}

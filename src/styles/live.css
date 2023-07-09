@@ -35,6 +35,7 @@
   font-size: 2rem;
   border-color: #057fa1;
   border-width: 0.3rem;
+  cursor: pointer;
 }
 
 .show-info p {
