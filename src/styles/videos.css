@@ -1,0 +1,12 @@
+.video-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100vw;
+  overflow: auto;
+}
+
+.video {
+  width: 100%;
+  height: 100vh;
+}
