@@ -51,6 +51,8 @@ const HamburgerMenu: React.FC = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <>
       <button className="menu-icon" onClick={toggleMenu}>
@@ -60,7 +62,12 @@ const HamburgerMenu: React.FC = () => {
         <div className="hamburger-menu">
           <h1 className="menu-logo">LINKIN PARK</h1>
           {navLinks.map((link, index) => (
-            <NavLink key={index} to={link.path} className="menu-item">
+            <NavLink
+              key={index}
+              to={link.path}
+              className="menu-item"
+              onClick={closeMenu}
+            >
               {link.display}
             </NavLink>
           ))}

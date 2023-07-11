@@ -1,4 +1,11 @@
-const shows = [
+export interface ShowsInter {
+  date: string;
+  venue: string;
+  location: string;
+  link: string;
+}
+
+const shows: ShowsInter[] = [
   {
     date: "June 27, 2023",
     venue: "THE CYNTHIA WOODS MITCHELL PAVILLION",

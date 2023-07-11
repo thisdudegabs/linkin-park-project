@@ -10,7 +10,14 @@ import Album9 from "../music/album9.jpg";
 import Album10 from "../music/album10.jpg";
 import Album11 from "../music/album11.jpg";
 
-const albums = [
+export interface AlbumsInter {
+  id: number;
+  title: string;
+  image: string;
+  link: string;
+}
+
+const albums: AlbumsInter[] = [
   {
     id: 1,
     title: "Hybrid Theory",
