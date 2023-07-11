@@ -51,7 +51,7 @@ const membersData: MembersInter[] = [
   },
   {
     id: 6,
-    title: "Dave 'Phoenix' Farrell",
+    title: "Dave 'Phoenix'",
     image: Phoenix,
     description:
       "David Michael Farrell (born February 8, 1977), also known as 'Phoenix' is currently Linkin Park’s bassist and backup vocalist. Farrell was born in Plymouth, Massachusetts, but when he was five he moved to Mission Viejo, California where he attended Mission Viejo High School. He graduated in 1999 at the University of California, Los Angeles. He can play bass guitar, electric guitar, cello and violin. He has also been known to play an upright bass.",

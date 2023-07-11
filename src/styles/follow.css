@@ -58,3 +58,32 @@
   width: 5vw;
   height: 10vh;
 }
+
+@media (max-width: 931px) {
+  .popup {
+    width: 90vw;
+    height: 50vh;
+  }
+
+  .icon-link {
+    width: 15vw;
+  }
+}
+
+@media (max-width: 443px) {
+  .icon-link {
+    width: 25vw;
+    height: 10vh;
+  }
+}
+
+@media (max-width: 399px) {
+  .popup {
+    height: 60vh;
+  }
+
+  .icon-link {
+    width: 25vw;
+    height: 10vh;
+  }
+}

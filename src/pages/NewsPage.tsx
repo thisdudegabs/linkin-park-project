@@ -17,7 +17,7 @@ const NewsPage: FC = () => {
   }, [newsId]);
 
   return (
-    <div style={{ display: "flex" }}>
+    <div className="news-page" style={{ display: "flex" }}>
       {news && (
         <>
           <div className="news-collum" style={{ flex: "1", padding: "10px" }}>
@@ -26,6 +26,7 @@ const NewsPage: FC = () => {
           </div>
           <div style={{ flex: "1" }}>
             <img
+              className="img-section"
               src={news.image}
               alt={news.title}
               style={{ width: "100%", height: "100%" }}
